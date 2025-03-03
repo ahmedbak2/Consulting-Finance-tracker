@@ -53,44 +53,6 @@ model.fit(x,y) # Creates a linear regression model
 
 future_weeks = np.array([53,54,55,56,57,58,59,60]) # Array of the desired weeks that I want forecasted for
 predicted_cost= model.predict(future_weeks.reshape((-1,1))) # This predict the future costs using the regression model
-#Now I will do a linear regression to forecast the future utilisation.
-
-import numpy as np
-from sklearn.linear_model import LinearRegression
-
-x = np.array(df_out['Weeks']).reshape((-1,1)) #This is the independent vaiable and (-1,1) as the function expects a 2D array
-y = np.array(df_out['Aggregate_Total']).reshape((-1,1)) #This is the dependent variable
-
-model = LinearRegression() # Creates a linear regression model
-model.fit(x,y) # Creates a linear regression model
-
-future_weeks = np.array([53,54,55,56,57,58,59,60]) # Array of the desired weeks that I want forecasted for
-#Now I will do a linear regression to forecast the future utilisation.
-
-import numpy as np
-from sklearn.linear_model import LinearRegression
-
-x = np.array(df_out['Weeks']).reshape((-1,1)) #This is the independent vaiable and (-1,1) as the function expects a 2D array
-y = np.array(df_out['Aggregate_Total']).reshape((-1,1)) #This is the dependent variable
-
-model = LinearRegression() # Creates a linear regression model
-model.fit(x,y) # Creates a linear regression model
-
-future_weeks = np.array([53,54,55,56,57,58,59,60]) # Array of the desired weeks that I want forecasted for
-predicted_cost= model.predict(future_weeks.reshape((-1,1))) # This predict the future costs using the regression model
-#Now I will do a linear regression to forecast the future utilisation.
-
-import numpy as np
-from sklearn.linear_model import LinearRegression
-
-x = np.array(df_out['Weeks']).reshape((-1,1)) #This is the independent vaiable and (-1,1) as the function expects a 2D array
-y = np.array(df_out['Aggregate_Total']).reshape((-1,1)) #This is the dependent variable
-
-model = LinearRegression() # Creates a linear regression model
-model.fit(x,y) # Creates a linear regression model
-
-future_weeks = np.array([53,54,55,56,57,58,59,60]) # Array of the desired weeks that I want forecasted for
-predicted_cost= model.predict(future_weeks.reshape((-1,1))) # This predict the future costs using the regression model
 print(predicted_cost)
 print('Final consultant utilised amount is ' + str(predicted_cost[-1]) + ' GBP') # Forecasted final value
 
